@@ -11,6 +11,7 @@ StaticAppSettings is a C# library that provides a convenient way to manage and a
 ## Usage
 
 Here's how you can use StaticAppSettings to access your configuration settings:
+Install the package from [NuGet](https://www.nuget.org/packages/nightmaregaurav.staticappsettings/).
 
 ```csharp
 using StaticAppSettings;
