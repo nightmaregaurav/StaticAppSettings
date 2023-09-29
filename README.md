@@ -1,6 +1,6 @@
 # StaticAppSettings
 
-StaticAppSettings is a C# library that provides a convenient way to manage and access configuration settings in your ASP.NET Core application. This library is built on top of `Microsoft.Extensions.Configuration` and offers thread-safe static APIs to get configuration settings from appsettings sources, such as JSON files and environment variables.
+StaticAppSettings is a C# library that provides a convenient way to manage and access configuration settings in your ASP.NET Core application. This library is built on top of `Microsoft.Extensions.Configuration` and offers static APIs to get configuration settings from `builder.Configuration`.
 
 ## Features
 
@@ -23,9 +23,15 @@ var connectionString = AppSettingsHelper.GetSection("ConnectionStrings:DefaultCo
 
 ## Configuration Sources
 
-StaticAppSettings supports configuration from the following sources:
+StaticAppSettings need to be configured in program.cs first:
 
-- JSON files (e.g., `appsettings.json` and `appsettings.{mode}.json`).
+```csharp
+using StaticAppSettings;
+
+// ...
+
+AppSettingsHelper.Configure(builder.Configuration);
+```
 
 ## License
 
